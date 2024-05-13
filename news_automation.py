@@ -1,4 +1,4 @@
-import sys
+from sys import argv
 
 API_KEY = 'd25cc0bde2cd4aeca732c66175bcc2d9'
 
@@ -28,4 +28,7 @@ def _get_articles(params):
         print(result['url'])
         print('')
 
-
+if __name__ == "--main__":
+    print(f"Getting news for you {argv[1]}...\n")
+    get_articles_by_category(argv[1])
+    print(f"Successfully retrieved top {argv[1]} headlines")
