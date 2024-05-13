@@ -1,1 +1,1 @@
-# news_automation
+# News Automation
