@@ -1,4 +1,5 @@
 from sys import argv
+from urllib import request
 
 API_KEY = 'd25cc0bde2cd4aeca732c66175bcc2d9'
 
@@ -14,7 +15,7 @@ def get_articles_by_category(category):
     return _get_articles(query_parameters)
 
 def _get_articles(params):
-    response = requests.get(URL, params=params)
+    response = request.get(URL, params=params)
 
     articles = response.json()['articles']
 
